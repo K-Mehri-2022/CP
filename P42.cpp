@@ -4,11 +4,11 @@ using namespace std;
 
 main() {
 	
-int x,y,z,s,w,m;
+int x,y,z;
+float s;
+	
 cin >> x >> y >> z;
-s=(x-y)*(x+z);
-w=(x+y+z)*(x+y+z)+1;
-m=s/w;
-cout << m;
+s=(float)((x-y)*(x+z))/((x+y+z)*(x+y+z)+1);
+cout << s;
 
 }
