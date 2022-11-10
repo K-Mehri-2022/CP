@@ -7,7 +7,7 @@ char op;
 cout << " please enter an english letter : ";
 cin >> op;
 
-switch (op){
+    switch (op){
 	case 'a':
 		cout << "vowel";
 		break;
