@@ -13,7 +13,7 @@ main() {
 	    	break;
     	case 'e':
 	    	cout << "vowel";
-            break;
+                break;
         case 'i':
         	cout << "vowel";
         	break;
