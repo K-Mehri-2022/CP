@@ -9,8 +9,8 @@ cin >> op;
 
 switch (op){
 	case 'a':
-		cout << "vowel";
-		break;
+	  cout << "vowel";
+	break;
 	case 'e':
 		cout << "vowel";
         break;
