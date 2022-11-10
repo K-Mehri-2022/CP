@@ -8,19 +8,19 @@ main() {
     cin >> op;
 
     switch (op){
-	    case 'a':
+	case 'a':
 	    	cout << "vowel";
 	    	break;
     	case 'e':
 	    	cout << "vowel";
             break;
-         case 'i':
+        case 'i':
         	cout << "vowel";
         	break;
-         case 'o':
+        case 'o':
         	cout << "vowel";
         	break;
-         case 'u':
+        case 'u':
         	cout << "vowel";
     }
 }
