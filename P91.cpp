@@ -23,7 +23,7 @@ main() {
 	}
 		
 		cout << "Result of this array : ";
-		     for(i=0; i<=9; i++){
+		     for(i=0; i<=10; i++){
 		     	cout << a[i] << " ";
 		}
 		
