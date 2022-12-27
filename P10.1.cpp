@@ -1,74 +1,89 @@
 /* Taylor Series */
-// sinx , cosx , tanx 
+
+// sin , cos , tan 
 
 #include <iostream>
+#define _USE_MATH_DEFINES
 #include <math.h>
 #include <conio.h>
 
 using namespace std;
 
-int power(int a,int b){
-
-    int p = 1;
-	for(int i=1; i<=b; i+=2){
-		p = p*a;
+int power(int w , int h){
+	
+	int pow = 1;
+	for(int i=1; i<=h; i++){
+		pow = pow * w;
 	}
-	return p;
+	return pow;
 }
 
-int fact(int n){
+int fact(int x){
 	
 	int f = 1;
-	for(int i=2; i <= n; i+=2){
-		f = f*i;
+	for(int i=1; i<=x; i++){
+		f = f * i;
 	}
 	return f;
 }
 
-float sin(int n , int x){
+int sin(int n){
 	
-	float t , s = 0;
-	for(int i=1; i<n; i+=2){
-		
-		t = power(x,i)/fact(i);
-		s = s + t;
-		s = s - t;
+	double t , s;
+	int flag = 0;
+	for(int i=1; i<=7; i+=2){
+		t = power(n,i)/fact(i);
+		if (flag == 0){
+			s = s+t;
+			flag = 1;
+		}
+		else{
+			s = s-t;
+			flag = 0;
+		}
 	}
 	return s;
 }
 
-float cos(int n , int x){
+int cos(int n){
 	
-	float t , c = 0;
-	for(int i=1; i<n; i+=2){
-		
-		t = power(x,i)/fact(i);
-		c = c + t;
-		c = c - t;
+	double t , c;
+	int flag = 0;
+	for(int i=2; i<=6; i+=2){
+		t = power(n,i)/fact(i);
+		if (flag == 0){
+			c = c+t;
+			flag = 1;
+		}
+		else{
+			c = c-t;
+			flag = 0;
+		}
 	}
-	return c; 
+	return c;
 }
 
-float tan(int s , int c){
+float tan(int n){
 	
 	float tan;
-	int n;
+	int x;
 	
-	tan = (float)sin(n)/cos(n);
+	tan = sin(x)/cos(x);
 	
-	return tan;	
+	return tan;
 }
-	
+
 int main(){
 	
-	int n , x;
-	cout << "Enter n = ";
-	cin >> n;
-	cout << "Enter x = ";
+	int x;
+	cout << "Please Enter x = ";
 	cin >> x;
-	cout << "sinx = " << sin(n) << endl;
-	cout << "cosx = " << cos(n) << endl;
-	cout << "tanx = " << tan(n);
+	
+	double n = x*3.14159f/180;
+	
+	cout << sin(n) << endl;
+	cout << cos(n) << endl;
+	cout << tan(n) << endl;
 	
 	getch();
 	
